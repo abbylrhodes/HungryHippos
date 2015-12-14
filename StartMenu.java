@@ -23,7 +23,7 @@ public class StartMenu
         System.out.println();
         //System.out.println("Please type 'START' if you wish to begin");
         //Scanner startIn = new Scanner(System.in);
-        //String start = startIn.next();
+        ////String start = startIn.next();
         String start = "START";
         
         // Precondition #4
