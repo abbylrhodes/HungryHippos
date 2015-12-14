@@ -9,7 +9,7 @@ public class HardLevelBoard extends Board {
         {
             Player.player1Default();
            
-            drawHardLevelBoard(Board.drawBoard());
+            drawLevelBoard(Board.drawBoard());
         
             Player.player2Default();
         
@@ -17,7 +17,7 @@ public class HardLevelBoard extends Board {
         }
     }
     
-    public static String[][] drawHardLevelBoard(String [][] board)
+    public static String[][] drawLevelBoard(String [][] board)
     {
         Random randInt = new Random();
 

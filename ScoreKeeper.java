@@ -7,11 +7,6 @@ public class ScoreKeeper
 {
     static int scoreP1 = 0;
     static int scoreP2 = 0;
-    
-    public ScoreKeeper()
-    {
-        // initialise instance variables
-    }
 
     public static void scoreBoard(int scoreP1, int scoreP2)
     {      

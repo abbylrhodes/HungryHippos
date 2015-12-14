@@ -1,7 +1,6 @@
 package application;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -10,11 +9,6 @@ public class Player
     // Instance Variables for Player 1's key and Player 2's key.
     static String p1Key;
     static String p2Key;
-
-    public Player()
-    {
-        
-    }
 
     /*
      * Assigns the Key that Player 1 will have to press, from options 'a' or 'l'

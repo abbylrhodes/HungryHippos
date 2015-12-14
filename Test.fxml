@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -8,9 +9,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="411.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+<AnchorPane prefHeight="457.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
    <children>
-      <TextArea editable="false" layoutX="12.0" layoutY="11.0" prefHeight="390.0" prefWidth="393.0" text="  HUNGRY HUNGRY&#10;          HIPPOS&#10;&#10;     START MENU" wrapText="true">
+      <TextArea editable="false" layoutX="12.0" layoutY="11.0" prefHeight="435.0" prefWidth="464.0" text="     HUNGRY HUNGRY&#10;            HIPPOS&#10;&#10;    &#10;        &#10;        START MENU" wrapText="true">
          <font>
             <Font name="Comic Sans MS" size="36.0" />
          </font>
@@ -18,15 +19,20 @@
             <ColorAdjust brightness="-0.02" hue="-0.07" saturation="0.46" />
          </effect>
       </TextArea>
-      <Button fx:id="startButton" layoutX="87.0" layoutY="282.0" mnemonicParsing="false" onAction="#startButtonAction" prefHeight="41.0" prefWidth="93.0" text="Start" underline="true">
+      <Button fx:id="startButton" layoutX="111.0" layoutY="345.0" mnemonicParsing="false" onAction="#startButtonAction" prefHeight="41.0" prefWidth="93.0" text="Start" underline="true">
          <font>
             <Font name="Comic Sans MS" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="quitButton" layoutX="237.0" layoutY="282.0" mnemonicParsing="false" onAction="#quitButtonAction" prefHeight="42.0" prefWidth="85.0" text="Quit" underline="true">
+      <Button fx:id="quitButton" layoutX="291.0" layoutY="345.0" mnemonicParsing="false" onAction="#quitButtonAction" prefHeight="42.0" prefWidth="85.0" text="Quit" underline="true">
          <font>
             <Font name="Comic Sans MS" size="20.0" />
          </font>
       </Button>
+      <ImageView fitHeight="147.0" fitWidth="265.0" layoutX="111.0" layoutY="125.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../bin/application/images.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

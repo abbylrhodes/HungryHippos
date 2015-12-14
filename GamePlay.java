@@ -4,12 +4,6 @@ import java.util.Scanner;
 
 public class GamePlay
 {
-    
-    public GamePlay()
-    {
-       
-    }
-
     /*
      * Main driving function for game. Continues until the "Normal Food" is all gone.
      * 

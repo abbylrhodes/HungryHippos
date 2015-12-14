@@ -3,13 +3,14 @@ package application;
 import java.util.Random;
 
 public class EasyLevelBoard extends Board{
-    public static void beginEasyLevel() 
+    public static void beginEasyLevel()
     {
+    	
         if(Player.getPlayer1Key() != null && Player.getPlayer2Key() != null)
         {
             Player.player1Default();
            
-            drawEasyLevelBoard(Board.drawBoard());
+            drawLevelBoard(Board.drawBoard());
         
             Player.player2Default();
         
@@ -17,7 +18,8 @@ public class EasyLevelBoard extends Board{
         }
     }
     
-    public static String[][] drawEasyLevelBoard(String [][] board)
+    
+    public static String[][] drawLevelBoard(String [][] board)
     {
         Random randInt = new Random();
 

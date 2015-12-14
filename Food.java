@@ -7,12 +7,6 @@ public class Food
     static int extraCount = 7;
     static int normCount = 15;
     static int negCount = 7;
-    
-    public Food()
-    {
-        // initialise instance variables
-
-    }
 
         public static int getCountExtra1(String [][] board)
     {

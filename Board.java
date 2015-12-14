@@ -2,40 +2,26 @@ package application;
 
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Board {
-    static String level;
+    public static String level;
     
     public static void beginBoard() 
     {
         StartMenu.start();
         if(Player.getPlayer1Key() != null && Player.getPlayer2Key() != null)
         {
-            Player.player1Default();
-           
-            //drawBoard();
-            printBoard(drawBoard());
-        
-            Player.player2Default();
-        
-            ScoreKeeper.main(0,0);
-            
-            System.out.println("\nBefore you start, a difficulty level needs to be chosen!\n");
-
+        	System.out.println();
             chooseLevel();
         }
     }
     
     public static String chooseLevel()
     {
-        Scanner levelIn = new Scanner(System.in);
-        System.out.print("Choose 'EASY' or 'HARD' for level: ");
-        level = levelIn.next();
-        
+    	
         if (level.equals("EASY"))
         {
-        	EasyLevelBoard.beginEasyLevel();
+    		EasyLevelBoard.beginEasyLevel();
         }
         
         else if (level.equals("HARD"))

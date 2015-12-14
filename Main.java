@@ -15,6 +15,7 @@ public class Main extends Application {
 	@FXML Button quitButton;
 	@FXML Button easyLevelButton;
 	@FXML Button hardLevelButton;
+	@FXML Button nevermindButton;
 	Stage primaryStage;
 	Stage primaryStage2;
 	
@@ -32,8 +33,9 @@ public class Main extends Application {
 		}
 	}
 
-	public void start2(Stage primaryStage2) {
+	public void start2() {
 		try {			
+			Stage primaryStage2 = new Stage();
 			Parent root2 = FXMLLoader.load(getClass().getResource("chooseLevelFX.fxml"));
 			Scene scene2 = new Scene(root2);
 			scene2.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -51,7 +53,10 @@ public class Main extends Application {
 	
 	@FXML
 	private void startButtonAction(ActionEvent event) {
-		GamePlay.main();
+		start2();
+		Stage stage = (Stage) startButton.getScene().getWindow();
+		stage.close();
+		//GamePlay.main();
 	}
 	
 	@FXML
@@ -63,11 +68,35 @@ public class Main extends Application {
 	
 	@FXML
 	private void hardLevelButtonAction(ActionEvent event) {
-		HardLevelBoard.beginHardLevel();
+		//GamePlay.main();
+		String level = "HARD";
+		
+		Stage stage2 = (Stage) hardLevelButton.getScene().getWindow();
+		stage2.close();
+				
+		Board.level = level;
+		GamePlay.main();
+		//HardLevelBoard.beginHardLevel();
 	}
+	
 	
 	@FXML
 	private void easyLevelButtonAction(ActionEvent event) {
-		EasyLevelBoard.beginEasyLevel();
+		//GamePlay.main();
+		String level = "EASY";
+		
+		Stage stage2 = (Stage) easyLevelButton.getScene().getWindow();
+		stage2.close();
+				
+		Board.level = level;
+		GamePlay.main();
+		//EasyLevelBoard.beginEasyLevel();
+	}
+	
+	@FXML
+	private void nevermindQuitAction(ActionEvent event) {
+		StartMenu.quit();
+		Stage stage2 = (Stage) nevermindButton.getScene().getWindow();
+		stage2.close();
 	}
 }
