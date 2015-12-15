@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
 
@@ -7,6 +9,10 @@ public class ScoreKeeper
 {
     static int scoreP1 = 0;
     static int scoreP2 = 0;
+    // For a sort that didn't work :( 
+    //private static ArrayList<String> highScoreNames = new ArrayList <String> ();
+    //private static HashMap<String,Integer> highScores = new HashMap<String,Integer>();
+    //private static HashMap<String,Integer> highScoresSorted = new HashMap<String,Integer>();
 
     public static void scoreBoard(int scoreP1, int scoreP2)
     {      
@@ -125,6 +131,8 @@ public class ScoreKeeper
                 System.out.print("Please type your name: ");
                 String nameIn = in.next();
                 myWriter.write(count + ") " + nameIn + ": " + total1 + "\n");
+                //highScores.put(nameIn, total1);
+                //highScoreNames.add(nameIn);
                 System.out.println("\nThank you! Please come back and play again soon!");
                 myWriter.close();
             }
@@ -136,6 +144,8 @@ public class ScoreKeeper
                 System.out.print("Please type your name: ");
                 String nameIn = in.next();
                 myWriter.write(count + ") " + nameIn + ": " + total2 + "\n");
+                //highScores.put(nameIn, total2);
+                //highScoreNames.add(nameIn);
                 System.out.println("\nThank you! Please come back and play again soon!");
                 myWriter.close();
             }
@@ -177,6 +187,49 @@ public class ScoreKeeper
             System.err.println("Something went wrong when trying to read the scores.");
         }
     }
+    
+    
+      // This was to try and sort the winner Scores in order from High to low but it didn't work out....
+    
+//    public static void sortWinnerScores()
+//    {   
+//    	try
+//    	{
+//	    	FileWriter myWriter;
+//	   	 
+//	        myWriter = new FileWriter("WinnerScoresSorted.txt",true);
+//	    	 
+//	    	int count = 1;
+//	    	int smallestNum;
+//	    	String smallestName;
+//	    	
+//	    	for (int i = 0; i < highScores.size() - 1; i++)
+//	        {
+//	            int index = i;
+//	            for (int j = i + 1; j < highScores.size() - 1; j++)
+//	            {
+//	                if (highScores.get(j).intValue() > highScores.get(index).intValue())
+//	                {
+//	                    index = j;
+//	                }
+//	            }
+//	            smallestNum = highScores.get(index).intValue();
+//	            smallestName = highScoreNames.get(index);
+//	             
+//	            highScoresSorted.put(smallestName, smallestNum);
+//	            myWriter.write(count + ") " + smallestName + ": " + smallestNum + "\n");
+//	            System.out.println(count + ") " + smallestName + ": " + smallestNum);
+//	            count++;
+//	        }
+//	    	System.out.println(highScores);
+//	    	myWriter.close();
+//    	}
+//         
+//        catch (IOException e) 
+//        {
+//            System.err.println("Something went wrong trying to save your score.");
+//        }
+//    }
     
 }
 

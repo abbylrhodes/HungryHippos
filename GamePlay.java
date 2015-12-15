@@ -71,5 +71,7 @@ public class GamePlay
         System.out.println();
         ScoreKeeper.storeWinnerScore(total1, total2);
         ScoreKeeper.readWinnerScores();
+        System.out.println("\nHere are the Winners Score's Sorted");
+        ScoreKeeper.sortWinnerScores();
     }
 }

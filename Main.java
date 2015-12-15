@@ -56,7 +56,6 @@ public class Main extends Application {
 		start2();
 		Stage stage = (Stage) startButton.getScene().getWindow();
 		stage.close();
-		//GamePlay.main();
 	}
 	
 	@FXML
@@ -68,7 +67,6 @@ public class Main extends Application {
 	
 	@FXML
 	private void hardLevelButtonAction(ActionEvent event) {
-		//GamePlay.main();
 		String level = "HARD";
 		
 		Stage stage2 = (Stage) hardLevelButton.getScene().getWindow();
@@ -76,13 +74,11 @@ public class Main extends Application {
 				
 		Board.level = level;
 		GamePlay.main();
-		//HardLevelBoard.beginHardLevel();
 	}
 	
 	
 	@FXML
 	private void easyLevelButtonAction(ActionEvent event) {
-		//GamePlay.main();
 		String level = "EASY";
 		
 		Stage stage2 = (Stage) easyLevelButton.getScene().getWindow();
@@ -90,7 +86,6 @@ public class Main extends Application {
 				
 		Board.level = level;
 		GamePlay.main();
-		//EasyLevelBoard.beginEasyLevel();
 	}
 	
 	@FXML
